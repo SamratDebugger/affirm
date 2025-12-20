@@ -7,4 +7,6 @@
 
  @theme{
   --font-dm:"DM Sans", sans-serif;
+  --breakpoint-1xl:75rem;
+  --spacing-1xl:75rem;
  }
