@@ -24,7 +24,7 @@ export default function Hero() {
         </button>
       </div>
       <div className="relative">
-        <Features className="max-md:grid-cols-1 max-md:-translate-x-1/2 alert-warning max-md:left-1/2 max-md:bottom-40 md:-right-5 md:top-20 animate-bounce " />
+        <Features className="alert-warning md:-right-5 md:top-20 animate-bounce mobile-alert " />
         <Features className="alert-error bottom-40 hidden md:grid " />
         <img src="/assets/hero.webp" className="w-full" />
       </div>

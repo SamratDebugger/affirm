@@ -10,4 +10,10 @@
   --breakpoint-1xl:75rem;
   --breakpoint-xs:30rem;
   --spacing-1xl:75rem;
+
  }
+
+ .mobile-alert{
+  @apply max-md:grid-cols-1 max-md:grid-rows-2 max-md:-translate-x-1/2 max-md:left-1/2 max-md:bottom-40 max-md:justify-center max-md:justify-items-center max-md:gap-0
+ }
+
