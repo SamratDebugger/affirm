@@ -1,12 +1,9 @@
-import { FaCircleCheck } from "react-icons/fa6";
+import CheckIcon from "./ui/CheckIcon";
 
-export default function Features() {
+export default function Features({ className }) {
   return (
-    <div
-      role="alert"
-      className="alert alert-warning w-fit absolute -right-5 top-20 animate-bounce"
-    >
-      <FaCircleCheck className="size-6 text-success" />
+    <div role="alert" className={`alert  w-fit absolute z-10 ${className} `}>
+      <CheckIcon />
       <span> The Best on The Net!</span>
     </div>
   );
