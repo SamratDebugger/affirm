@@ -4,6 +4,9 @@ import Home from "../routes/Home";
 import Login from "../routes/Login";
 import Registration from "../routes/Registration";
 import Dashboard from "../routes/Dashboard";
+import Blog from "../routes/Blog";
+import About from "../routes/About";
+import NotFound from "../routes/NotFound";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="registration" element={<Registration />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="dashboard" element={<Dashboard />} />
       </Routes>
