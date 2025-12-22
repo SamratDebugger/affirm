@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import UserForm from "../components/UserForm";
+import AdjustedSection from "../components/ui/AdjustedSection";
 
 export default function Login() {
   return (
-    <section className="min-h-[calc(100dvh-65px)] flex items-center justify-center">
+    <AdjustedSection>
       <div className=" bg-base-200 border-base-300 rounded-box w-xs border p-4">
         <UserForm title="Login" />
         <p>
@@ -13,6 +14,6 @@ export default function Login() {
           </Link>
         </p>
       </div>
-    </section>
+    </AdjustedSection>
   );
 }

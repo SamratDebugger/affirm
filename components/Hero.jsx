@@ -1,6 +1,7 @@
 import { FaCirclePlay } from "react-icons/fa6";
 import Subtitle from "./Subtitle";
 import Features from "./Features";
+import { Link } from "react-router";
 
 export default function Hero() {
   return (
@@ -15,9 +16,11 @@ export default function Hero() {
           and a funding platform that&apos;s helped raise over $500 million for
           startups and small businesses world-wide.
         </p>
-        <button className="btn btn-success">
-          Get Started<span className="opacity-50">- For Free </span>
-        </button>
+        <Link to="/registration">
+          <button className="btn btn-success">
+            Get Started<span className="opacity-50">- For Free </span>
+          </button>
+        </Link>
         <button className="btn  btn-ghost hover:bg-transparent hover:shadow-none hover:text-success border-none">
           <FaCirclePlay />
           Watch Demo
