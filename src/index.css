@@ -14,6 +14,6 @@
  }
 
  .mobile-alert{
-  @apply max-md:grid-cols-1 max-md:grid-rows-2 max-md:-translate-x-1/2 max-md:left-1/2 max-md:bottom-40 max-md:justify-center max-md:justify-items-center max-md:gap-0
+  @apply max-md:grid-cols-1 max-md:grid-rows-2 max-md:-translate-x-1/2 max-md:left-1/2 max-md:bottom-30 max-md:justify-center max-md:justify-items-center max-md:gap-0 max-md:text-center
  }
 
