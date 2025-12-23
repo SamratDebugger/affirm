@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import ProfileMenu from "./ProfileMenu";
 
 export default function DashNav() {
@@ -25,7 +26,9 @@ export default function DashNav() {
             <path d="M14 10l2 2l-2 2"></path>
           </svg>
         </label>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to="/" className="btn btn-ghost text-xl">
+          daisyUI
+        </Link>
       </div>
       <div className="flex gap-2">
         <input

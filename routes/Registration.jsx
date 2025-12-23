@@ -1,8 +1,17 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import UserForm from "../components/UserForm";
 import AdjustedSection from "../components/ui/AdjustedSection";
+import { useContext, useEffect } from "react";
+import { AffirmContext } from "../context/MyContext";
 
 export default function Registration() {
+  const { user } = useContext(AffirmContext);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
   return (
     <AdjustedSection>
       <div className=" bg-base-200 border-base-300 rounded-box w-xs border p-4">
