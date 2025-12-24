@@ -8,6 +8,7 @@ import Blog from "../routes/Blog";
 import About from "../routes/About";
 import NotFound from "../routes/NotFound";
 import ProtectedRoute from "../routes/ProtectedRoute";
+import Contact from "../routes/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
         <Route
           path="dashboard"
