@@ -3,7 +3,7 @@ import NavItem from "./NavItem";
 
 export default function Nav() {
   return (
-    <header className="bg-base-100 sticky top-0 z-20">
+    <header className="bg-base-100 sticky top-0 z-20 ">
       <div className="navbar max-w-1xl mx-auto px-5">
         <div className="navbar-start">
           <div className="flex-none lg:hidden">
