@@ -1,11 +1,11 @@
 export default function Trusted() {
   return (
     <section className="py-20">
-      <div className="flex max-w-1xl mx-auto px-5 justify-between ">
-        <h1 className="max-w-50 text-2xl font-bold ">
+      <div className="flex max-w-1xl lg:flex-row flex-col mx-auto px-5 justify-between gap-y-8">
+        <h1 className="lg:max-w-50 text-2xl font-bold max-lg:text-center ">
           Trusted by companies all over the world
         </h1>
-        <div className="flex gap-8 items-center ">
+        <div className="flex gap-8 items-center flex-wrap max-lg:justify-center ">
           <img
             className="max-w-30"
             src="/assets/brand/logo-1.webp"
