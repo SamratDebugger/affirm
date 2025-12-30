@@ -5,23 +5,30 @@ import {
 } from "firebase/auth";
 import auth from "../firebase/firebase.js";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 export default function UserForm({ title }) {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleForm = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const email = e.target.email.value;
     const pass = e.target.pass.value;
     if (title === "Registration") {
       createUserWithEmailAndPassword(auth, email, pass)
         .then((userCredential) => {
           // Signed up
+          toast.success("Registration Successful");
+          setIsLoading(false);
           const user = userCredential.user;
           navigate("/dashboard");
         })
         .catch((error) => {
-          alert(error.message);
+          toast.error("Registration Failed!");
+          setIsLoading(false);
         });
     }
 
@@ -29,11 +36,14 @@ export default function UserForm({ title }) {
       signInWithEmailAndPassword(auth, email, pass)
         .then((userCredential) => {
           // Signed in
+          toast.success("Successfully Logged in");
+          setIsLoading(false);
           navigate("/dashboard");
           const user = userCredential.user;
         })
         .catch((error) => {
-          alert(error.message);
+          toast.error("Wrong User Credential!");
+          setIsLoading(false);
         });
     }
   };
@@ -61,7 +71,16 @@ export default function UserForm({ title }) {
         />
       </label>
 
-      <button className="btn btn-success mt-4">{title}</button>
+      <button disabled={isLoading} className="btn btn-success mt-4">
+        {isLoading ? (
+          <>
+            <span className="loading loading-spinner"></span>
+            loading
+          </>
+        ) : (
+          title
+        )}
+      </button>
     </form>
   );
 }

@@ -9,10 +9,12 @@ import About from "../routes/About";
 import NotFound from "../routes/NotFound";
 import ProtectedRoute from "../routes/ProtectedRoute";
 import Contact from "../routes/Contact";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
+      <ToastContainer />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
